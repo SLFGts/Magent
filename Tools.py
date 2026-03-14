@@ -121,9 +121,14 @@ weather_tool = StructuredTool.from_function(
 )
 
 # ====================== 工具3：RAG工具 ======================
+# 1. 自动获取当前 Tools.py 文件所在的文件夹绝对路径
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# 2. 动态拼凑出 PDF 的路径（这样不管在 Mac 还是云端 Linux 都能精准找到！）
+pdf_path = os.path.join(BASE_DIR, "绝密.pdf")
+
 # 加载器
 loader = PyPDFLoader(
-    file_path="/Users/slfg/Code/LangChain_Projects/绝密.pdf",
+    file_path=pdf_path,
 )
 # 加载
 docs = loader.load()
