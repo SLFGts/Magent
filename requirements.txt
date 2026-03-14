@@ -8,3 +8,4 @@ langchain-chroma
 pypdf
 tavily-python
 requests
+langchain_tavily
