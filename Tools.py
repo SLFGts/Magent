@@ -11,9 +11,9 @@ from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_chroma import Chroma
 
-# 添加这两行，强制设置代理（本地代理端口为 7890）
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
+# # 添加这两行，强制设置代理（本地代理端口为 7890）
+# os.environ["http_proxy"] = "http://127.0.0.1:7890"
+# os.environ["https_proxy"] = "http://127.0.0.1:7890"
 # 自动加载 .env 文件
 load_dotenv()
 
